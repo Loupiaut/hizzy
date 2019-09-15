@@ -21,7 +21,7 @@ const flash = require("connect-flash");
 const hbs = require("hbs");
 const debug = require("debug");
 
-mongoose.connect("mongodb://localhost:27017/juloup", { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 const app = express();
 
